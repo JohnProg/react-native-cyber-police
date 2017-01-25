@@ -7,11 +7,16 @@
 ![alt text](https://dl.dropboxusercontent.com/u/46690444/GITHUB/rnsk-v2-screens.jpg "React Native Starter App")
 
 ---
+## 注意事项
+
+    1.进行开发时候打开debug模式 开启chrome浏览器打开console控制台不然会卡，正式打包不会有该问题
+   
 ## 更新日志
 
     2017年01月25日
         1.克隆React Native Starter Kit重新命名项目
         2.修改图标(IOS & Android)
+        
 ## 说明
 
 1. [项目特色](#features)
