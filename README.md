@@ -9,6 +9,9 @@
 ---
 ## 更新日志
 
+    2017年01月25日
+        1.克隆React Native Starter Kit重新命名项目
+        2.修改图标(IOS & Android)
 ## 说明
 
 1. [项目特色](#features)
