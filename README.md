@@ -7,6 +7,7 @@
 ![alt text](https://dl.dropboxusercontent.com/u/46690444/GITHUB/rnsk-v2-screens.jpg "React Native Starter App")
 
 ---
+## 更新日志
 
 ## 说明
 
