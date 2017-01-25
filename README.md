@@ -1,34 +1,31 @@
 ![alt text](https://dl.dropboxusercontent.com/u/46690444/GITHUB/rnsk-logo.jpg "React Native Starter Kit")
 
-# React Native Starter Kit
+# React Native Cyber Police
 
-React Native Starter Kit helps you get started with React Native. It contains a bunch of helpful components, building blocks and basic structure to allow you to jump straight into building an app.
+演示项目-不提供后台服务(感谢[React Native Starter Kit](https://github.com/mcnamee/react-native-starter-app))
 
 ![alt text](https://dl.dropboxusercontent.com/u/46690444/GITHUB/rnsk-v2-screens.jpg "React Native Starter App")
 
 ---
 
-## Docs
+## 说明
 
-1. [Features](#features)
-1. **Before you start**
+1. [项目特色](#features)
+1. **项目开始前**
   1. [Getting Started with React Native](/docs/react-native.md)
-  1. [React Native Quick Tips](/docs/quick-tips.md)
-  1. [Understanding the File Structure](#understanding-the-file-structure)
-  1. [Opinions Guiding this Project](/docs/opinions.md)
-1. **Using RNSK**
-  1. [Getting Up and Running with RNSK](#getting-started)
-  1. [Renaming the App from StarterKit](/docs/renaming.md)
-  1. [Routing / Navigating](/src/navigation/README.md)
-  1. [Using Google Analytics](/docs/google-analytics.md)
+  1. [React Native 快速使用建议](/docs/quick-tips.md)
+  1. [项目文件结构](#understanding-the-file-structure)
+  1. [该项目可选的手册](/docs/opinions.md)
+1. **使用该项目**
+  1. [获取项目运行项目](#getting-started)
+  1. [重命名项目](/docs/renaming.md)
+  1. [导航器](/src/navigation/README.md)
+  1. [谷歌分析组件](/docs/google-analytics.md)
   1. [Interacting with a REST API](/docs/api.md)
-  1. [Testing](/docs/testing.md)
-1. [Contributing](/docs/contributing.md)
-1. [Licence](LICENSE)
-
+  1. [测试](/docs/testing.md)
 ---
 
-## Features
+## 项目特色
 
 | Feature | Summary |
 | --- | --- |
@@ -46,7 +43,7 @@ React Native Starter Kit helps you get started with React Native. It contains a 
 
 ---
 
-## Getting Started
+## 项目使用
 
 1. Ensure you've followed the [React Native - Get Started Guide](https://facebook.github.io/react-native/docs/getting-started.html) for the platform/s of choice
 1. Clone this project `git clone https://github.com/mcnamee/react-native-starter-app.git`
@@ -55,19 +52,19 @@ React Native Starter Kit helps you get started with React Native. It contains a 
 
 ---
 
-## Understanding the File Structure
+## 文档项目结构
 
-- `/android` - The native Android stuff
-- `/ios` - The native iOS stuff
-- `/src` - Contains the full React Native App codebase
-  - `/components` - 'Dumb-components' / presentational. [Read More &rarr;](/src/components/README.md)
+- `/android` - 安卓原生代码
+- `/ios` - 苹果原生代码
+- `/src` - 包含所有React Native代码
+  - `/components` - 'Dumb-components' / presentational. [更多 &rarr;](/src/components/README.md)
   - `/constants` - App-wide variables and config
-  - `/containers` - 'Smart-components' / the business logic. [Read More &rarr;](/src/containers/README.md)
-  - `/images` - Self explanatory right?
-  - `/lib` - Utils, custom libraries, functions
-  - `/navigation`- Routes - wire up the router with any & all screens. [Read More &rarr;](/src/navigation/README.md)
-  - `/redux` - Redux Reducers & Actions grouped by type. [Read More &rarr;](/src/redux/README.md)
-  - `/theme` - Theme specific styles and variables
+  - `/containers` - 'Smart-components' / the business logic. [更多 &rarr;](/src/containers/README.md)
+  - `/images` - 图片
+  - `/lib` - 工具类,通用函数
+  - `/navigation`- 导航器组件 [更多 &rarr;](/src/navigation/README.md)
+  - `/redux` - 状态管理组件 [更多 &rarr;](/src/redux/README.md)
+  - `/theme` - 主题和一些自定义字符串
 
 
 
