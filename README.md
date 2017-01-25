@@ -45,10 +45,10 @@
 
 ## 项目使用
 
-1. Ensure you've followed the [React Native - Get Started Guide](https://facebook.github.io/react-native/docs/getting-started.html) for the platform/s of choice
-1. Clone this project `git clone https://github.com/mcnamee/react-native-starter-app.git`
-1. Run `npm install` from root directory
-1. Start the app in [an emulator](/docs/quick-tips.md#running-in-an-emulator)
+1. 确保按照该 [React Native - Get Started Guide](https://facebook.github.io/react-native/docs/getting-started.html) 项目开始选择自己的平台
+1. 克隆到本地 `git clone https://github.com/LancCJ/react-native-cyber-police.git`
+1. 在项目根目录下运行 `npm install` 命令
+1. 在 [模拟器](/docs/quick-tips.md#running-in-an-emulator)中运行项目
 
 ---
 
