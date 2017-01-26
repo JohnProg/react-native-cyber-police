@@ -55,8 +55,8 @@ class Login extends Component {
         error: '',
       },
       form_fields: FormValidation.struct({
-        Email: validEmail,
-        Password: validPassword,
+        用户名: validEmail,
+        密码: validPassword,
       }),
       empty_form_values: {
         Email: '',
@@ -66,12 +66,12 @@ class Login extends Component {
       options: {
         fields: {
           Email: {
-            error: 'Please enter a valid email',
+            error: '请输入合法的邮箱',
             autoCapitalize: 'none',
             clearButtonMode: 'while-editing',
           },
           Password: {
-            error: 'Your new password must be more than 6 characters',
+            error: '您的密码长度必须超过6位',
             clearButtonMode: 'while-editing',
             secureTextEntry: true,
           },
@@ -105,7 +105,7 @@ class Login extends Component {
     // Form is valid
     if (credentials) {
       this.setState({ form_values: credentials }, () => {
-        this.setState({ resultMsg: { status: 'One moment...' } });
+        this.setState({ resultMsg: { status: '请稍等...' } });
 
         // Scroll to top, to show message
         if (this.scrollView) {
@@ -117,7 +117,7 @@ class Login extends Component {
           password: credentials.Password,
         }, true).then(() => {
           this.setState({
-            resultMsg: { success: 'Awesome, you\'re now logged in!' },
+            resultMsg: { success: '恭喜您\'正在登陆中!' },
           }, () => {
             setTimeout(() => {
               Actions.app({ type: 'reset' });
@@ -156,7 +156,7 @@ class Login extends Component {
           />
 
           <Button
-            title={'Login'}
+            title={'用户登录'}
             onPress={this.login}
           />
 
@@ -164,7 +164,7 @@ class Login extends Component {
 
           <TouchableOpacity onPress={Actions.passwordReset}>
             <Text p style={[AppStyles.textCenterAligned, AppStyles.link]}>
-              Forgot Password
+              忘记密码?
             </Text>
           </TouchableOpacity>
 
@@ -175,7 +175,7 @@ class Login extends Component {
           </Text>
 
           <Button
-            title={'Sign Up'}
+            title={'用户注册'}
             onPress={Actions.signUp}
           />
         </Card>

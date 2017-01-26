@@ -53,7 +53,7 @@ class Authenticate extends Component {
       <View style={[AppStyles.row, AppStyles.paddingHorizontal]}>
         <View style={[AppStyles.flex1]}>
           <Button
-            title={'Login'}
+            title={'用户登录'}
             icon={{ name: 'lock' }}
             onPress={Actions.login}
           />
@@ -65,7 +65,7 @@ class Authenticate extends Component {
       <View style={[AppStyles.row, AppStyles.paddingHorizontal]}>
         <View style={[AppStyles.flex1]}>
           <Button
-            title={'Sign up'}
+            title={'用户注册'}
             icon={{ name: 'face' }}
             onPress={Actions.signUp}
           />
@@ -85,7 +85,7 @@ class Authenticate extends Component {
         <View style={[AppStyles.flex2]}>
           <Button
             small
-            title={'Skip'}
+            title={'跳过'}
             onPress={Actions.app}
             backgroundColor={'#CB009E'}
             raised={false}

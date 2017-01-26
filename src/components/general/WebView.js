@@ -68,7 +68,7 @@ class AppWebView extends Component {
     const { webViewURL, loading } = this.state;
 
     if (loading) return <Loading />;
-    if (!webViewURL) return <Error type={'URL not defined.'} />;
+    if (!webViewURL) return <Error type={'URL请求地址未定义'} />;
 
     return (
       <WebView

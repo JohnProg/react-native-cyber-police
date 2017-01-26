@@ -23,7 +23,7 @@ const Placeholder = ({ text }) => (
 );
 
 Placeholder.propTypes = { text: PropTypes.string };
-Placeholder.defaultProps = { text: 'Coming soon...' };
+Placeholder.defaultProps = { text: '建设中,敬请期待...' };
 Placeholder.componentName = 'Placeholder';
 
 /* Export Component ==================================================================== */

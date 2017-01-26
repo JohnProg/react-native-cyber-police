@@ -9,7 +9,7 @@ import { AppColors, AppStyles, AppSizes } from '@theme/';
 
 export default {
   // App Details
-  appName: 'CyberPolice',//应用名称
+  appName: '新警务',//应用名称
 
   // Build Configuration - eg. Debug or Release?
   DEV: __DEV__,

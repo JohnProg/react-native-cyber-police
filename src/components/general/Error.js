@@ -32,7 +32,7 @@ const Error = ({ text, tryAgain }) => (
       <Button
         small
         outlined
-        title={'Try again'}
+        title={'重来一次'}
         onPress={tryAgain}
       />
     }

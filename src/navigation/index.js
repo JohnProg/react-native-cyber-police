@@ -43,7 +43,7 @@ export default Actions.create(
       {/* General */}
       <Scene
         key={'comingSoon'}
-        title={'Coming Soon'}
+        title={'建设中,敬请期待...'}
         component={Placeholder}
         analyticsDesc={'Placeholder: Coming Soon'}
       />
