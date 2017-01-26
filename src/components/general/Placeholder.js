@@ -1,6 +1,6 @@
 /**
  * Placeholder Scene
- *
+ *默认显示文字
     <Placeholder text={"Hello World"} />
  *
  * React Native Starter App

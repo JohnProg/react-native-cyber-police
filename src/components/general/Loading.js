@@ -1,5 +1,6 @@
 /**
  * Loading Screen
+ * 进度
  *
      <Loading text={'Server is down'} />
  *

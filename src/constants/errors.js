@@ -7,11 +7,11 @@
 
 export default {
   // Defaults
-  default: 'Hmm, an unknown error occured',
-  timeout: 'Server Timed Out. Check your internet connection',
-  invalidJson: 'Response returned is not valid JSON',
+  default: '未知错误',
+  timeout: '服务超市,请检查网络状况',
+  invalidJson: '请求返回的不是合格的JSON数据',
 
   // Recipes
-  recipe404: 'No recipes found',
+  recipe404: '未请求到数据',
   missingMealId: 'Missing meal definition',
 };

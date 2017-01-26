@@ -1,5 +1,6 @@
 /**
  * Navbar Menu Button
+ * 首页 顶部 左侧 MENU 图标点击事件
  *
  * React Native Starter App
  * https://github.com/mcnamee/react-native-starter-app

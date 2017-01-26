@@ -93,7 +93,11 @@ class Menu extends Component {
     this.state = {
       menu: [
         {
-          title: 'Recipes',
+          title: '数据状态',
+          onPress: () => { this.props.closeSideMenu(); Actions.app(); },
+        },
+        {
+          title: 'GPS状态',
           onPress: () => { this.props.closeSideMenu(); Actions.app(); },
         },
         {
@@ -116,7 +120,7 @@ class Menu extends Component {
           this.props.closeSideMenu();
           Actions.login();
         }).catch(() => {
-          Alert.alert('Oh uh!', 'Something went wrong.');
+          Alert.alert('额~~!', '发生一些错误');
         });
     }
   }
@@ -168,7 +172,7 @@ class Menu extends Component {
                 <View style={[AppStyles.paddingHorizontal, AppStyles.paddingVerticalSml]}>
                   <Button
                     small
-                    title={'Log Out'}
+                    title={'注销用户'}
                     onPress={this.logout}
                   />
                 </View>
@@ -177,7 +181,7 @@ class Menu extends Component {
               <View style={[AppStyles.paddingHorizontal, AppStyles.paddingVerticalSml]}>
                 <Button
                   small
-                  title={'Log In'}
+                  title={'用户登录'}
                   onPress={this.login}
                 />
               </View>

@@ -1,5 +1,6 @@
 /**
  * Error Screen
+ * 错误
  *
     <Error text={'Server is down'} />
  *
