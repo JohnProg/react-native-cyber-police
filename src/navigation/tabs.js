@@ -21,6 +21,10 @@ import StyleGuide from '@containers/StyleGuideView';
 import Recipes from '@containers/recipes/Browse/BrowseContainer';
 import RecipeView from '@containers/recipes/RecipeView';
 
+//Police业务
+import Home from '@police/home/HomeContainer';
+
+
 const navbarPropsTabs = {
   ...AppConfig.navbarProps,
   renderLeftButton: () => <NavbarMenuButton />,
@@ -40,7 +44,7 @@ const scenes = (
           key={'firstPage'}
           {...navbarPropsTabs}
           title={'首页'}
-          component={Placeholder}
+          component={Home}
           icon={props => TabIcon({ ...props, icon: 'home' })}
           analyticsDesc={'首页: Coming Soon'}
       />

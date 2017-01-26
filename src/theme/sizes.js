@@ -30,4 +30,6 @@ export default {
   paddingSml: 10,
 
   borderRadius: 2,
+
+  iconSize:26
 };

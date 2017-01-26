@@ -241,4 +241,24 @@ export default {
     borderTopColor: Colors.border,
     borderTopWidth: 1,
   },
+
+  //Home首页
+  homeTopNotice:{
+    width:Sizes.screen.width,
+    height:Sizes.screen.height*0.05,
+    backgroundColor: '#FF9800',
+    marginTop:0,
+    flexDirection:'row',
+    justifyContent:'space-between',
+    alignItems:'center',
+    paddingLeft:Sizes.screen.width*0.04,
+    paddingRight:Sizes.screen.width*0.04
+  },
+  homeTopNoticeText:{
+    color:'#FFF',
+    fontSize:Sizes.screen.height*0.02,
+    textAlign:'center',
+    width:Sizes.screen.width-26*2-Sizes.screen.width*0.08,
+    //backgroundColor:'#2B2B2B'
+  }
 };

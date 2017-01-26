@@ -96,3 +96,19 @@ export function updateMe(payload) {
       return userData;
     });
 }
+
+
+/**
+ * 获取用户公共通知（非实时推送消息）
+ */
+export function getNotice() {
+    return dispatch => AppAPI.me.get()
+        .then((noticeData) => {
+            dispatch({
+                type: 'USER_NOTICE',
+                data: noticeData,
+            });
+
+            return noticeData;
+        });
+}
