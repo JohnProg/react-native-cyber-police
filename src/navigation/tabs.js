@@ -51,46 +51,68 @@ const scenes = (
 
 
 
-      {/*======Start Kit框架示例=========*/}
-      <Scene
-      {...navbarPropsTabs}
-      key={'recipes'}
-      title={'Recipes'}
-      icon={props => TabIcon({ ...props, icon: 'search' })}
-    >
-      <Scene
-        {...navbarPropsTabs}
-        key={'recipesListing'}
-        component={Recipes}
-        title={AppConfig.appName}
-        analyticsDesc={'Recipes: Browse Recipes'}
-      />
-      <Scene
-        {...AppConfig.navbarProps}
-        key={'recipeView'}
-        component={RecipeView}
-        getTitle={props => ((props.title) ? props.title : 'View Recipe')}
-        analyticsDesc={'RecipeView: View Recipe'}
-      />
-    </Scene>
+
+
 
       <Scene
           key={'timeline'}
           {...navbarPropsTabs}
-          title={'报表统计'}
+          title={'数据警规'}
           component={Placeholder}
           icon={props => TabIcon({ ...props, icon: 'timeline' })}
-          analyticsDesc={'报表统计: 建设中'}
+          analyticsDesc={'数据警规: 建设中'}
       />
 
-    <Scene
-      key={'styleGuide'}
-      {...navbarPropsTabs}
-      title={'Style Guide'}
-      component={StyleGuide}
-      icon={props => TabIcon({ ...props, icon: 'speaker-notes' })}
-      analyticsDesc={'StyleGuide: Style Guide'}
-    />
+      <Scene
+          key={'syncstate'}
+          {...navbarPropsTabs}
+          title={'上传状态'}
+          component={Placeholder}
+          icon={props => TabIcon({ ...props, icon: 'backup' })}
+          analyticsDesc={'上传状态: 建设中'}
+      />
+
+      <Scene
+          key={'message'}
+          {...navbarPropsTabs}
+          title={'警务对话'}
+          component={Placeholder}
+          icon={props => TabIcon({ ...props, icon: 'speaker-notes' })}
+          analyticsDesc={'警务对话: 建设中'}
+      />
+
+      {/*======Start Kit框架示例=========*/}
+
+      {/*<Scene*/}
+          {/*{...navbarPropsTabs}*/}
+          {/*key={'recipes'}*/}
+          {/*title={'Recipes'}*/}
+          {/*icon={props => TabIcon({ ...props, icon: 'search' })}*/}
+      {/*>*/}
+          {/*<Scene*/}
+              {/*{...navbarPropsTabs}*/}
+              {/*key={'recipesListing'}*/}
+              {/*component={Recipes}*/}
+              {/*title={AppConfig.appName}*/}
+              {/*analyticsDesc={'Recipes: Browse Recipes'}*/}
+          {/*/>*/}
+          {/*<Scene*/}
+              {/*{...AppConfig.navbarProps}*/}
+              {/*key={'recipeView'}*/}
+              {/*component={RecipeView}*/}
+              {/*getTitle={props => ((props.title) ? props.title : 'View Recipe')}*/}
+              {/*analyticsDesc={'RecipeView: View Recipe'}*/}
+          {/*/>*/}
+      {/*</Scene>*/}
+
+    {/*<Scene*/}
+      {/*key={'styleGuide'}*/}
+      {/*{...navbarPropsTabs}*/}
+      {/*title={'Style Guide'}*/}
+      {/*component={StyleGuide}*/}
+      {/*icon={props => TabIcon({ ...props, icon: 'speaker-notes' })}*/}
+      {/*analyticsDesc={'StyleGuide: Style Guide'}*/}
+    {/*/>*/}
   </Scene>
 );
 
