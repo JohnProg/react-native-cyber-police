@@ -33,16 +33,20 @@ const navbarPropsTabs = {
 /* Routes ==================================================================== */
 const scenes = (
   <Scene key={'tabBar'} tabs tabBarIconContainerStyle={AppStyles.tabbar} pressOpacity={0.95}>
+      {/*======Police业务=========*/}
+
+      {/*首页*/}
       <Scene
           key={'firstPage'}
           {...navbarPropsTabs}
           title={'首页'}
           component={Placeholder}
-          icon={props => TabIcon({ ...props, icon: 'timeline' })}
-          analyticsDesc={'Placeholder: Coming Soon'}
+          icon={props => TabIcon({ ...props, icon: 'home' })}
+          analyticsDesc={'首页: Coming Soon'}
       />
 
-    <Scene
+      {/*======Start Kit框架示例=========*/}
+      <Scene
       {...navbarPropsTabs}
       key={'recipes'}
       title={'Recipes'}
