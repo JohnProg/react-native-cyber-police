@@ -12,7 +12,9 @@ import {
   Image,
   StatusBar,
   StyleSheet,
-  ActivityIndicator
+  ActivityIndicator,
+TouchableOpacity,
+    Alert
 } from 'react-native';
 
 import { Actions } from 'react-native-router-flux';
@@ -26,7 +28,11 @@ const styles = StyleSheet.create({
 });
 
 // 组件库
-import { Text,CJNotices} from '@ui/';
+import { Text,CJNotices,Spacer} from '@ui/';
+
+import { Icon } from 'react-native-elements';
+
+import HomeTopView from './HomeTopView'
 
 var noticeData=require('@localData/home/notice.json')
 
@@ -51,16 +57,38 @@ class AppHome extends Component {
       // Not Logged in, show Login screen
       //.catch(() => Actions.authenticate({ type: 'reset' }));
   }
+    renderHomeTopNoticeView(){
+        return (
+            <View style={AppStyles.homeTopNotice}>
+              <Icon
+                  type='ionicon'
+                  name='ios-megaphone-outline'
+                  size={26}
+                  color='#FFFFFF'
+              />
+              <Text style={AppStyles.homeTopNoticeText}>
+                顶部通知顶部通知没法实现的话只能webview
+              </Text>
+              <TouchableOpacity onPress={()=>{Alert.alert('点击关闭公共通知按钮')}}>
+                <Icon
+                    type='ionicon'
+                    name='ios-close-circle-outline'
+                    size={26}
+                    color='#FFFFFF'
+                />
+              </TouchableOpacity>
+            </View>
+        )
+    }
+    renderHomeTopMenuView(){
+        return (
+            <HomeTopView/>
+        )
+    }
   render = () => (
       <View style={[AppStyles.container]}>
-          {/*顶部通知组件*/}
-          <CJNotices
-              leftIconType={'ionicon'}
-              leftIconName={'ios-megaphone-outline'}
-              rightIconType={'ionicon'}
-              rightIconName={'ios-close-circle-outline'}
-              noticesData={null}
-          />
+          {this.renderHomeTopNoticeView()}
+          {this.renderHomeTopMenuView()}
       </View>
   );
 }

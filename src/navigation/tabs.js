@@ -49,6 +49,8 @@ const scenes = (
           analyticsDesc={'首页: Coming Soon'}
       />
 
+
+
       {/*======Start Kit框架示例=========*/}
       <Scene
       {...navbarPropsTabs}
@@ -72,14 +74,14 @@ const scenes = (
       />
     </Scene>
 
-    <Scene
-      key={'timeline'}
-      {...navbarPropsTabs}
-      title={'Coming Soon'}
-      component={Placeholder}
-      icon={props => TabIcon({ ...props, icon: 'timeline' })}
-      analyticsDesc={'Placeholder: Coming Soon'}
-    />
+      <Scene
+          key={'timeline'}
+          {...navbarPropsTabs}
+          title={'报表统计'}
+          component={Placeholder}
+          icon={props => TabIcon({ ...props, icon: 'timeline' })}
+          analyticsDesc={'报表统计: 建设中'}
+      />
 
     <Scene
       key={'styleGuide'}
