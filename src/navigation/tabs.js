@@ -105,14 +105,14 @@ const scenes = (
           {/*/>*/}
       {/*</Scene>*/}
 
-    {/*<Scene*/}
-      {/*key={'styleGuide'}*/}
-      {/*{...navbarPropsTabs}*/}
-      {/*title={'Style Guide'}*/}
-      {/*component={StyleGuide}*/}
-      {/*icon={props => TabIcon({ ...props, icon: 'speaker-notes' })}*/}
-      {/*analyticsDesc={'StyleGuide: Style Guide'}*/}
-    {/*/>*/}
+    <Scene
+      key={'styleGuide'}
+      {...navbarPropsTabs}
+      title={'Style Guide'}
+      component={StyleGuide}
+      icon={props => TabIcon({ ...props, icon: 'speaker-notes' })}
+      analyticsDesc={'StyleGuide: Style Guide'}
+    />
   </Scene>
 );
 

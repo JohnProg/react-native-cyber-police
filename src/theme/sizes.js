@@ -31,5 +31,6 @@ export default {
 
   borderRadius: 2,
 
-  iconSize:26
+  iconSize:26,
+    fontSize:screenWidth*screenHeight*0.00005
 };

@@ -14,7 +14,7 @@ import {
   StyleSheet,
   ActivityIndicator,
 TouchableOpacity,
-    Alert
+    Alert,ScrollView
 } from 'react-native';
 
 import { Actions } from 'react-native-router-flux';
@@ -28,11 +28,13 @@ const styles = StyleSheet.create({
 });
 
 // 组件库
-import { Text,CJNotices,Spacer} from '@ui/';
+import { Text,Spacer} from '@ui/';
 
 import { Icon } from 'react-native-elements';
 
 import HomeTopView from './HomeTopView'
+import PagerView from './PagerView'
+
 
 var noticeData=require('@localData/home/notice.json')
 
@@ -85,11 +87,51 @@ class AppHome extends Component {
             <HomeTopView/>
         )
     }
+    renderHomeTopPagerView(){
+        return (
+            <PagerView/>
+        )
+    }
+    renderHomeWorkStateView(){
+        return (
+            <View style={[AppStyles.HomeWorkState]}>
+                <View style={{flexDirection:'row',width:AppSizes.screen.width,height:AppSizes.screen.height*0.06,justifyContent:'space-between',alignItems:'center',borderBottomWidth:0.5,borderBottomColor:'#5E6977'}}>
+                    <View style={{flexDirection:'row',justifyContent:"center",alignItems:'center'}}>
+                        <View style={{backgroundColor:'#3BC8F0',width:AppSizes.screen.width*0.02,height:AppSizes.screen.height*0.06}}></View>
+                        <Text style={{color:'#3BC8F0',paddingLeft:AppSizes.screen.width*0.02}}>工作量情况(日)</Text>
+                    </View>
+                    <View style={{paddingRight:AppSizes.screen.width*0.04,flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
+                        <View>
+                            <Text  style={{color:'#5E6977'}}>更多</Text>
+                        </View>
+                        <View style={{marginLeft:AppSizes.screen.width*0.01}}>
+                            <Icon
+                                type='ionicon'
+                                name='ios-arrow-dropright-circle-outline'
+                                size={26}
+                                color='#3BC8F0'
+                            />
+                        </View>
+                    </View>
+                </View>
+                <View style={{flexDirection:'row',flexWrap:'wrap',width:AppSizes.screen.width,height:AppSizes.screen.height*0.14,justifyContent:'center',alignItems:'center',backgroundColor:'#FFF'}}>
+                    <View  style={[AppStyles.HomeWorkStateTextView,{backgroundColor:'#7FB85C'}]}><Text style={[AppStyles.HomeWorkStateText]}>人员采集:21</Text></View>
+                    <View  style={[AppStyles.HomeWorkStateTextView,{backgroundColor:'#40C6E9'}]}><Text style={[AppStyles.HomeWorkStateText]}>人员查询:16</Text></View>
+                    <View  style={[AppStyles.HomeWorkStateTextView,{backgroundColor:'#FA7CB8'}]}><Text style={[AppStyles.HomeWorkStateText]}>车辆采集:21</Text></View>
+                    <View  style={[AppStyles.HomeWorkStateTextView,{backgroundColor:'#FF9733'}]}><Text style={[AppStyles.HomeWorkStateText]}>车辆查询:13</Text></View>
+                    <View  style={[AppStyles.HomeWorkStateTextView,{backgroundColor:'#2A658F'}]}><Text style={[AppStyles.HomeWorkStateText]}>房屋采集:0</Text></View>
+                    <View  style={[AppStyles.HomeWorkStateTextView,{backgroundColor:'#FFCE51'}]}><Text style={[AppStyles.HomeWorkStateText]}>单位采集:1</Text></View>
+                </View>
+            </View>
+        )
+    }
   render = () => (
-      <View style={[AppStyles.container]}>
+      <ScrollView style={[AppStyles.container]}>
           {this.renderHomeTopNoticeView()}
+          {this.renderHomeTopPagerView()}
           {this.renderHomeTopMenuView()}
-      </View>
+          {this.renderHomeWorkStateView()}
+      </ScrollView>
   );
 }
 

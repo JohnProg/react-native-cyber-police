@@ -260,5 +260,35 @@ export default {
     textAlign:'center',
     width:Sizes.screen.width-26*2-Sizes.screen.width*0.08,
     //backgroundColor:'#2B2B2B'
-  }
+  },
+    homeTopPager:{
+        width:Sizes.screen.width,
+        height:Sizes.screen.height*0.2,
+        backgroundColor: '#FFF',
+        marginTop:0
+    },
+    HomeWorkState:{
+        width:Sizes.screen.width,
+        height:Sizes.screen.height*0.2,
+        backgroundColor: '#FFF',
+        marginTop:Sizes.screen.height*0.01,
+        justifyContent:'center',
+        alignItems:'center'
+    },
+    HomeWorkStateText:{
+        textAlign:'center',
+        color:'#FFF',
+        //backgroundColor:'green',
+        fontSize:Sizes.fontSize
+    },
+    HomeWorkStateTextView:{
+        width:Sizes.screen.width/3-Sizes.screen.width*0.03,
+        height:Sizes.screen.height*0.06,
+        backgroundColor: 'red',
+        justifyContent:'center',
+        alignItems:'center',
+        borderRadius:Sizes.screen.height*0.06/2,
+        marginLeft:Sizes.screen.width*0.03,
+        marginTop:Sizes.screen.height*0.01
+    }
 };
