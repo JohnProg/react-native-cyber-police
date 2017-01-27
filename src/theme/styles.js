@@ -282,7 +282,7 @@ export default {
         fontSize:Sizes.fontSize
     },
     HomeWorkStateTextView:{
-        width:Sizes.screen.width/3-Sizes.screen.width*0.03,
+        width:(Sizes.screen.width-Sizes.screen.width*0.03*4)/3,
         height:Sizes.screen.height*0.06,
         backgroundColor: 'red',
         justifyContent:'center',
