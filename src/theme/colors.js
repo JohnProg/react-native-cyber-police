@@ -18,6 +18,13 @@ const brand = {
   },
 };
 
+const brandnew = {
+    brandnew: {
+        primary: '#FFF',
+        secondary: '#FFF',
+    },
+};
+
 const text = {
   textPrimary: '#222222',
   textSecondary: '#777777',

@@ -35,6 +35,9 @@ import { Icon } from 'react-native-elements';
 import HomeTopView from './HomeTopView'
 import PagerView from './PagerView'
 
+import TabsView from './TabsView'
+
+
 
 var noticeData=require('@localData/home/notice.json')
 
@@ -125,12 +128,21 @@ class AppHome extends Component {
             </View>
         )
     }
+    renderHomeTabsView(){
+        return (
+            <View style={{backgroundColor:'red',width:AppSizes.screen.width,height:AppSizes.screen.height*0.5,marginTop:AppSizes.screen.height*0.01}}>
+                <TabsView/>
+            </View>
+            )
+
+    }
   render = () => (
       <ScrollView style={[AppStyles.container]}>
           {this.renderHomeTopNoticeView()}
           {this.renderHomeTopPagerView()}
           {this.renderHomeTopMenuView()}
           {this.renderHomeWorkStateView()}
+          {this.renderHomeTabsView()}
       </ScrollView>
   );
 }
