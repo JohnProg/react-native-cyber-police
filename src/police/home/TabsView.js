@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   tabbar: {
-    backgroundColor: AppColors.brandnew.primary,
+    backgroundColor: '#FFF',
   },
   tabbarIndicator: {
     backgroundColor: '#40C6E9',

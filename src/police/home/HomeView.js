@@ -130,20 +130,23 @@ class AppHome extends Component {
     }
     renderHomeTabsView(){
         return (
-            <View style={{backgroundColor:'red',width:AppSizes.screen.width,height:AppSizes.screen.height*0.5,marginTop:AppSizes.screen.height*0.01}}>
+            <View style={{backgroundColor:'#FFF',width:AppSizes.screen.width,height:AppSizes.screen.height*0.2,marginTop:AppSizes.screen.height*0.01}}>
                 <TabsView/>
             </View>
             )
 
     }
   render = () => (
-      <ScrollView style={[AppStyles.container]}>
+      <View style={[AppStyles.container]}>
           {this.renderHomeTopNoticeView()}
-          {this.renderHomeTopPagerView()}
-          {this.renderHomeTopMenuView()}
-          {this.renderHomeWorkStateView()}
-          {this.renderHomeTabsView()}
-      </ScrollView>
+          <ScrollView style={[AppStyles.container]}>
+              {this.renderHomeTopPagerView()}
+              {this.renderHomeTopMenuView()}
+              {this.renderHomeWorkStateView()}
+              {this.renderHomeTabsView()}
+          </ScrollView>
+      </View>
+
   );
 }
 
