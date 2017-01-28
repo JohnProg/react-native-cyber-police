@@ -24,6 +24,9 @@ import RecipeView from '@containers/recipes/RecipeView';
 //Police业务
 import Home from '@police/home/HomeContainer';
 
+import Talk from '@police/talk/TalkContainer';
+
+
 
 const navbarPropsTabs = {
   ...AppConfig.navbarProps,
@@ -76,34 +79,34 @@ const scenes = (
           key={'message'}
           {...navbarPropsTabs}
           title={'警务对话'}
-          component={Placeholder}
+          component={Talk}
           icon={props => TabIcon({ ...props, icon: 'speaker-notes' })}
           analyticsDesc={'警务对话: 建设中'}
       />
 
       {/*======Start Kit框架示例=========*/}
 
-      {/*<Scene*/}
-          {/*{...navbarPropsTabs}*/}
-          {/*key={'recipes'}*/}
-          {/*title={'Recipes'}*/}
-          {/*icon={props => TabIcon({ ...props, icon: 'search' })}*/}
-      {/*>*/}
-          {/*<Scene*/}
-              {/*{...navbarPropsTabs}*/}
-              {/*key={'recipesListing'}*/}
-              {/*component={Recipes}*/}
-              {/*title={AppConfig.appName}*/}
-              {/*analyticsDesc={'Recipes: Browse Recipes'}*/}
-          {/*/>*/}
-          {/*<Scene*/}
-              {/*{...AppConfig.navbarProps}*/}
-              {/*key={'recipeView'}*/}
-              {/*component={RecipeView}*/}
-              {/*getTitle={props => ((props.title) ? props.title : 'View Recipe')}*/}
-              {/*analyticsDesc={'RecipeView: View Recipe'}*/}
-          {/*/>*/}
-      {/*</Scene>*/}
+      <Scene
+          {...navbarPropsTabs}
+          key={'recipes'}
+          title={'Recipes'}
+          icon={props => TabIcon({ ...props, icon: 'search' })}
+      >
+          <Scene
+              {...navbarPropsTabs}
+              key={'recipesListing'}
+              component={Recipes}
+              title={AppConfig.appName}
+              analyticsDesc={'Recipes: Browse Recipes'}
+          />
+          <Scene
+              {...AppConfig.navbarProps}
+              key={'recipeView'}
+              component={RecipeView}
+              getTitle={props => ((props.title) ? props.title : 'View Recipe')}
+              analyticsDesc={'RecipeView: View Recipe'}
+          />
+      </Scene>
 
     <Scene
       key={'styleGuide'}
