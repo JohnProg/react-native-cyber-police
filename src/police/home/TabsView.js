@@ -28,7 +28,7 @@ import {
   ListItem,
 } from '@components/ui/';
 
-
+import ChartOneView from '@police/home/ChartOneView'
 
 /* Styles ==================================================================== */
 const styles = StyleSheet.create({
@@ -85,7 +85,7 @@ class TabsView extends Component {
       case '0' :
         return (
           <View style={styles.tabContainer}>
-              <Text>今日工作量</Text>
+
           </View>
         );
       case '1' :
