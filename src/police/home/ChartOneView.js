@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 
 // Consts and Libs
-import { AppColors, AppStyles } from '@theme/';
+import { AppColors, AppStyles ,AppSizes} from '@theme/';
 
 // Components
 import {
@@ -26,25 +26,15 @@ import {
     ListItem,
 } from '@components/ui/';
 
-import Chart from 'react-native-chart';
-
+import Echarts from 'native-echarts';
 /* Styles ==================================================================== */
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'white',
-    },
-    chart: {
-        width: 200,
-        height: 200,
-    },
+
 });
 
 /* Component ==================================================================== */
-class DemoView extends Component {
-    static componentName = 'DemoView';
+class ChartOneView extends Component {
+    static componentName = 'ChartOneView';
 
     constructor(props) {
         super(props);
@@ -57,25 +47,29 @@ class DemoView extends Component {
 
 
     render() {
-        const data = [[
-            [0, 1],
-            [1, 3],
-            [3, 7],
-            [4, 9],
-        ]];
+        const option = {
+            title: {
+                text: '今日工作量统计'
+            },
+            tooltip: {},
+            legend: {
+                data:['事件(起)']
+            },
+            xAxis: {
+                data: ["人员查询","车辆查询","重点人员","线索线报","流动人口","网吧采集"]
+            },
+            yAxis: {},
+            series: [{
+                name: '事件(起)',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
         return (
-            <View style={styles.container}>
-                <Chart
-                    style={styles.chart}
-                    data={data}
-                    verticalGridStep={5}
-                    type="line"
-                    showDataPoint={true}
-                />
-            </View>
+            <Echarts option={option} height={AppSizes.screen.height*0.4} />
         );
     }
 }
 
 /* Export Component ==================================================================== */
-export default DemoView;
+export default ChartOneView;

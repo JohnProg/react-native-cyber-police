@@ -25,6 +25,7 @@ import RecipeView from '@containers/recipes/RecipeView';
 import Home from '@police/home/HomeContainer';
 
 import Talk from '@police/talk/TalkContainer';
+import State from '@police/state/StateContainer';
 
 
 
@@ -70,7 +71,7 @@ const scenes = (
           key={'syncstate'}
           {...navbarPropsTabs}
           title={'上传状态'}
-          component={Placeholder}
+          component={State}
           icon={props => TabIcon({ ...props, icon: 'backup' })}
           analyticsDesc={'上传状态: 建设中'}
       />

@@ -85,7 +85,7 @@ class TabsView extends Component {
       case '0' :
         return (
           <View style={styles.tabContainer}>
-
+            <ChartOneView/>
           </View>
         );
       case '1' :

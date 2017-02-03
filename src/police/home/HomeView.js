@@ -130,7 +130,7 @@ class AppHome extends Component {
     }
     renderHomeTabsView(){
         return (
-            <View style={{backgroundColor:'#FFF',width:AppSizes.screen.width,height:AppSizes.screen.height*0.2,marginTop:AppSizes.screen.height*0.01}}>
+            <View style={{backgroundColor:'#FFF',width:AppSizes.screen.width,height:AppSizes.screen.height*0.4,marginTop:AppSizes.screen.height*0.01}}>
                 <TabsView/>
             </View>
             )
